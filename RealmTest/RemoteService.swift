@@ -15,7 +15,7 @@ class RemoteService {
     }
     
     func testRequest() {
-        Alamofire.request("https://test.test/test", method: HTTPMethod.post, parameters: [:], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in // the request naturally fails in this scenario but in our real app a JSON is retrieved
+        Alamofire.request("https://test.test/test", method: HTTPMethod.get, parameters: [:], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in // the request naturally fails in this scenario but in our real app a JSON is retrieved
             
             let user = User() // these objects are built up from the retrieved JSON
             user.id = "123"
