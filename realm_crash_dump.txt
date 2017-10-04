@@ -1,0 +1,48 @@
+2017-10-04 10:41:34.168256+0300 ***APP_NAME***[32292:1956799] *** Terminating app due to uncaught exception 'RLMException', reason: 'Target table row index out of range'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x000000010be4d1cb __exceptionPreprocess + 171
+	1   libobjc.A.dylib                     0x000000010b7b7f41 objc_exception_throw + 48
+	2   Realm                               0x0000000108f344fd RLMAddObjectToRealm + 941
+	3   Realm                               0x0000000108eb2bb0 _ZN18RLMAccessorContext5unboxIN5realm12BasicRowExprINS1_5TableEEEEET_P11objc_objectbb + 1632
+	4   Realm                               0x0000000108ec197e _ZN5realm6Object23set_property_value_implIU8__strongP11objc_object18RLMAccessorContextEEvRT0_RKNS_8PropertyET_bb + 1358
+	5   Realm                               0x0000000108f3594c _ZN5realm6Object6createIU8__strongP11objc_object18RLMAccessorContextEES0_RT0_RKNSt3__110shared_ptrINS_5RealmEEERKNS_12ObjectSchemaET_bPNS_8BasicRowINS_5TableEEE + 4812
+	6   Realm                               0x0000000108f3445c RLMAddObjectToRealm + 780
+	7   Realm                               0x0000000108eb2bb0 _ZN18RLMAccessorContext5unboxIN5realm12BasicRowExprINS1_5TableEEEEET_P11objc_objectbb + 1632
+	8   Realm                               0x0000000108ec197e _ZN5realm6Object23set_property_value_implIU8__strongP11objc_object18RLMAccessorContextEEvRT0_RKNS_8PropertyET_bb + 1358
+	9   Realm                               0x0000000108f3594c _ZN5realm6Object6createIU8__strongP11objc_object18RLMAccessorContextEES0_RT0_RKNSt3__110shared_ptrINS_5RealmEEERKNS_12ObjectSchemaET_bPNS_8BasicRowINS_5TableEEE + 4812
+	10  Realm                               0x0000000108f3445c RLMAddObjectToRealm + 780
+	11  RealmSwift                          0x0000000107a679c8 _T010RealmSwift0A0C3addyAA6ObjectC_Sb6updatetF + 952
+	12  ***APP_NAME***                            0x0000000103887ed9 _T08***APP_NAME***11DataManagerC14insertOrUpdatey10RealmSwift6ObjectC6object_tFyycfU_ + 73
+	13  ***APP_NAME***                            0x0000000103888117 _T08***APP_NAME***11DataManagerC14insertOrUpdatey10RealmSwift6ObjectC6object_tFyycfU_TA + 71
+	14  RealmSwift                          0x0000000107a6716d _T010RealmSwift0A0C5writeyyyKcKF + 93
+	15  ***APP_NAME***                            0x0000000103887c7a _T08***APP_NAME***11DataManagerC14insertOrUpdatey10RealmSwift6ObjectC6object_tF + 202
+	16  ***APP_NAME***                            0x0000000103888240 _T08***APP_NAME***11DataManagerC14insertOrUpdateySay10RealmSwift6ObjectCG7objects_tFyAGcfU_ + 80
+	17  ***APP_NAME***                            0x000000010388826c _T08***APP_NAME***11DataManagerC14insertOrUpdateySay10RealmSwift6ObjectCG7objects_tFyAGcfU_TA + 12
+	18  ***APP_NAME***                            0x0000000103888289 _T010RealmSwift6ObjectCs5Error_pIxxzo_ACsAD_pIxizo_TR + 25
+	19  ***APP_NAME***                            0x0000000103888363 _T010RealmSwift6ObjectCs5Error_pIxxzo_ACsAD_pIxizo_TRTA + 83
+	20  libswiftCore.dylib                  0x000000010ed2d199 _T0s8SequencePsE7forEachyy7ElementQzKcKFTfq4gn_n + 345
+	21  libswiftCore.dylib                  0x000000010eb1074f _T0s8SequencePsE7forEachyy7ElementQzKcKF + 15
+	22  ***APP_NAME***                            0x00000001038881c4 _T08***APP_NAME***11DataManagerC14insertOrUpdateySay10RealmSwift6ObjectCG7objects_tF + 164
+	23  ***APP_NAME***                            0x000000010396f3ac _T08***APP_NAME***13RemoteServiceC23handleSuccessfulRequest33_D74D087937D14F534C3CADCA66A90CE5LLyyp4json_x6parserySay1TQzG_SSSgtc10completionyAA0bC9ExceptionOc12errorHandlerSb17storeReplyToRealmtAA07FeedingA12ObjectParserRzlF + 1820
+	24  ***APP_NAME***                            0x000000010396e10a _T08***APP_NAME***13RemoteServiceC14handleResponse33_D74D087937D14F534C3CADCA66A90CE5LLy9Alamofire04DataE0VyypG8response_x6parserySay1TQzG_SSSgtc10completionyAA0bC9ExceptionOc12errorHandlerSb17storeReplyToRealmtAA07FeedingA12ObjectParserRzlF + 762
+	25  ***APP_NAME***                            0x000000010396a884 _T08***APP_NAME***13RemoteServiceC4postyx7request_ySay1P_1TQZG_SSSgtc10completionyAA0bC9ExceptionOc12errorHandlerSb17storeReplyToRealmtAA07FeedingA7RequestRzlFy9Alamofire12DataResponseVyypGcfU_ + 1284
+	26  ***APP_NAME***                            0x00000001039723a2 _T08***APP_NAME***13RemoteServiceC4postyx7request_ySay1P_1TQZG_SSSgtc10completionyAA0bC9ExceptionOc12errorHandlerSb17storeReplyToRealmtAA07FeedingA7RequestRzlFy9Alamofire12DataResponseVyypGcfU_TA + 210
+	27  ***APP_NAME***                            0x000000010396b0bb _T08***APP_NAME***13RemoteServiceC7request33_D74D087937D14F534C3CADCA66A90CE5LLyx_9Alamofire11URLEncodingV8encodingyAF12DataResponseVyypGc8callbacktAA0A7RequestRzlFyALcfU_ + 699
+	28  ***APP_NAME***                            0x0000000103972cf2 _T08***APP_NAME***13RemoteServiceC7request33_D74D087937D14F534C3CADCA66A90CE5LLyx_9Alamofire11URLEncodingV8encodingyAF12DataResponseVyypGc8callbacktAA0A7RequestRzlFyALcfU_TA + 66
+	29  Alamofire                           0x000000010517771e _T09Alamofire11DataRequestC8responseACXDSo13DispatchQueueCSg5queue_x0D10SerializeryAA0B8ResponseVy16SerializedObjectQzGc17completionHandlertAA0biH8ProtocolRzlFyycfU_yycfU_ + 926
+	30  Alamofire                           0x000000010518041e _T09Alamofire11DataRequestC8responseACXDSo13DispatchQueueCSg5queue_x0D10SerializeryAA0B8ResponseVy16SerializedObjectQzGc17completionHandlertAA0biH8ProtocolRzlFyycfU_yycfU_TA + 110
+	31  Alamofire                           0x000000010512f1a9 _T0Ix_IyB_TR + 41
+	32  libdispatch.dylib                   0x000000010f7973f7 _dispatch_call_block_and_release + 12
+	33  libdispatch.dylib                   0x000000010f79843c _dispatch_client_callout + 8
+	34  libdispatch.dylib                   0x000000010f7a36f0 _dispatch_main_queue_callback_4CF + 628
+	35  CoreFoundation                      0x000000010be0fef9 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+	36  CoreFoundation                      0x000000010bdd4662 __CFRunLoopRun + 2402
+	37  CoreFoundation                      0x000000010bdd3a89 CFRunLoopRunSpecific + 409
+	38  GraphicsServices                    0x00000001109fb9c6 GSEventRunModal + 62
+	39  UIKit                               0x000000010c991d30 UIApplicationMain + 159
+	40  ***APP_NAME***                            0x00000001039ffd97 main + 55
+	41  libdyld.dylib                       0x000000010f814d81 start + 1
+	42  ???                                 0x0000000000000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
